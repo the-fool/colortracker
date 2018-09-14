@@ -6,12 +6,13 @@ class Tracker {
   private neighbors = {};
   private neighborsI = [];
   private neighborsJ = [];
+  private videoNode: HTMLVideoElement;
   minGroupSize = 30;
   minMagnitude = 20;
   maxMagnitude = Infinity;
 
   constructor() {
-    const node = document.getElementById('tracker');
+    this.videoNode = document.getElementById('tracker') as HTMLVideoElement;
     Tracker.initUserMedia();
   }
 
